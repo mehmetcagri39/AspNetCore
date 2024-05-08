@@ -1,0 +1,18 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+    @Html.Partial("_CssLink")
+</head>
+<body>
+    @Html.Partial("_Header")
+    <div class="container">
+        @RenderBody()
+    </div>
+    @Html.Partial("_Footer", (List<FooterMenu>)ViewBag.FooterMenus)
+    @Html.Partial("_Javascript")
+    @RenderSection("Scripts",false)
+</body>
+</html>
